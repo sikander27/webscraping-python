@@ -14,7 +14,6 @@ if len(web)>1:
     soup = bs4.BeautifulSoup(res.text, 'html.parser')
     scrape = soup.getText()
     emails = set(re.findall(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[.]\w+", scrape))
-    print(soup)
     print("---------------------------------------------------------")
     if len(emails) > 0:
         print("List of emails:")
